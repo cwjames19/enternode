@@ -1,0 +1,91 @@
+@import './partials/colors';
+@import './partials/fonts';
+@import './partials/breakpoints';
+
+.header {
+  background-color: $color-black-header-background;
+}
+
+.header--container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;  // MAKE PADDING INSTEAD OF/IN ADDITION TO THIS
+  height: 830px;
+  padding: 4rem 100px 100px;
+}
+
+.header--hero {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .hero--text {
+    
+    & > h1 {
+      color: $color-cyan-header-text-hero;
+      font-family: "FuturaPT-Book";
+      font-size: 50px;
+      margin: 0 0 20px 0;
+    }
+
+    & > p {
+      font-family: "FuturaPT-Light";
+      font-size: 13px;
+      color: $color-white;
+      opacity: 0.8;
+      max-width: 480px;
+      line-height: 25px;
+    }
+  }
+
+  .hero--dots--container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 0 0;
+
+    & > div {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%;
+
+      & > div {
+        display: inline-block;
+        height: 3px;
+        width: 3px;
+        border-radius: 50%;
+  
+        &.blue {
+          background-color: $color-cyan-header-text-hero;
+        }
+  
+        &.citrus {
+          background-color: $color-citrus;
+        }
+  
+        &.grey {
+          background-color: #F8F8F8;
+        }
+      }
+
+      &.center {
+        justify-content: center;
+      }
+
+      &.space-around {
+        justify-content: space-around;
+      }
+
+      &.space-between {
+        justify-content: space-between;
+      }
+    }
+  }
+}

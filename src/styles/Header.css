@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "FuturaPT-Heavy";
+  src: url("../fonts/futura-pt-heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "FuturaPT-Book";
+  src: url("../fonts/futura-pt-book.otf") format("opentype");
+}
+@font-face {
+  font-family: "FuturaPT-Medium";
+  src: url("../fonts/futura-pt-medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "OverpassMono-Light";
+  src: url("../fonts/OverpassMono-Light.ttf") format("opentype");
+}
+.header {
+  background-color: #171717;
+}
+
+.header--container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  height: 830px;
+  padding: 4rem 100px 100px;
+}
+
+.header--hero {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header--hero .hero--text > h1 {
+  color: #45F0F9;
+  font-family: "FuturaPT-Book";
+  font-size: 50px;
+  margin: 0 0 20px 0;
+}
+.header--hero .hero--text > p {
+  font-family: "FuturaPT-Light";
+  font-size: 13px;
+  color: white;
+  opacity: 0.8;
+  max-width: 480px;
+  line-height: 25px;
+}
+.header--hero .hero--dots--container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px 0 0;
+}
+.header--hero .hero--dots--container > div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+}
+.header--hero .hero--dots--container > div > div {
+  display: inline-block;
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+}
+.header--hero .hero--dots--container > div > div.blue {
+  background-color: #45F0F9;
+}
+.header--hero .hero--dots--container > div > div.citrus {
+  background-color: #E1F196;
+}
+.header--hero .hero--dots--container > div > div.grey {
+  background-color: #F8F8F8;
+}
+.header--hero .hero--dots--container > div.center {
+  justify-content: center;
+}
+.header--hero .hero--dots--container > div.space-around {
+  justify-content: space-around;
+}
+.header--hero .hero--dots--container > div.space-between {
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=Header.css.map */

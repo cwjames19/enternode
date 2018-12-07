@@ -1,0 +1,59 @@
+@mixin media($value:'', $orientation:'') {
+  @if $value=='mobile' and $orientation=='' {
+    @media screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' and $orientation == '' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet-plus' and $orientation == '' {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $value == 'desktop' and $orientation == '' {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $value == 'mobile' and $orientation == 'landscape' {
+    @media screen and (max-width: 767px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $value == 'mobile' and $orientation == 'portrait' {
+    @media screen and (max-width: 767px) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' and $orientation == 'landscape' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+      @content;
+    }
+  }
+
+  @else if $value == 'tablet' and $orientation == 'portrait' {
+    @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+      @content;
+    }
+  }
+
+  @else if $value != '' {
+    @media(max-width: $value) {
+      @content;
+    }
+  }
+
+  @else {
+    @content;
+  }
+}
