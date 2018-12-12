@@ -1,0 +1,78 @@
+@import 'partials/colors';
+@import 'partials/breakpoints';
+
+.carousel-inner {
+  border: 60px solid $color-cyan;
+
+  @include media('tablet') {
+    border-width: 40px;
+  }
+
+  @include media('mobile') {
+    border-width: 25px;
+  }
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+  opacity: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  img, i {
+    position: relative;
+  }
+
+  // i {
+  //   position: absolute;
+  // }
+
+  .arrow-mobile {
+    display: none;
+    color: #161616;
+    font-size: 2.75rem;
+    opacity: 0.6;
+  }
+
+  @include media('mobile') {
+    img.arrow-desktop {
+      display: none;
+    }
+
+    .arrow-mobile {
+      display: block;
+    }
+  }
+}
+
+.carousel-control.left img, .carousel-control.left i {
+  align-self: flex-start;
+  right: 2rem;
+
+  @include media('mobile') {
+    left: 2.25rem;
+  }
+}
+
+.carousel-control.right img, .carousel-control.right i {
+  align-self: flex-end;
+  left: 2rem;
+
+  @include media('mobile') {
+    left: -2.25rem;
+  }
+}
+
+@include media('mobile') {
+  .carousel--caption--container {
+    display: none;
+  }
+}
+

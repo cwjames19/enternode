@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "FuturaPT-Heavy";
+  src: url("../fonts/futura-pt-heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "FuturaPT-Book";
+  src: url("../fonts/futura-pt-book.otf") format("opentype");
+}
+@font-face {
+  font-family: "FuturaPT-Medium";
+  src: url("../fonts/futura-pt-medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "OverpassMono-Light";
+  src: url("../fonts/OverpassMono-Light.ttf") format("opentype");
+}
+.big-header {
+  font-family: "FuturaPT-Book";
+  font-size: 50px;
+  color: #161616;
+}
+@media screen and (max-width: 767px) {
+  .big-header {
+    font-size: 28px;
+  }
+}
+
+.text {
+  font-family: "FuturaPT-Light";
+  font-size: 13px;
+  color: #161616;
+  opacity: 0.8;
+  line-height: 25px;
+}
+
+.dropdown button#dropdown-menu {
+  background-color: #161616;
+  border: none;
+  border-radius: 0px;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 10px;
+}
+.dropdown button#dropdown-menu:hover, .dropdown button#dropdown-menu:active {
+  background-color: #161616;
+  border: 1px solid #383838;
+}
+.dropdown button#dropdown-menu svg {
+  height: 100%;
+  width: 100%;
+}
+.dropdown button#dropdown-menu svg path {
+  fill: #E1F196;
+}
+
+.dropdown ul {
+  padding: 0;
+}
+.dropdown ul li {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  background-color: #161616;
+  border: 1px solid #383838;
+}
+.dropdown ul li a {
+  font-family: "FuturaPT-Book";
+  letter-spacing: 1.6px;
+  color: #E1F196;
+}
+.dropdown ul li:hover {
+  background-color: #E1F196;
+}
+.dropdown ul li:hover a {
+  color: #161616;
+}
+
+/*# sourceMappingURL=Dropdown.css.map */

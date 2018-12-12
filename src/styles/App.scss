@@ -1,0 +1,11 @@
+@import './partials/colors';
+
+.App, .header, .main {
+  width: 100%;
+}
+
+.header, .main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
