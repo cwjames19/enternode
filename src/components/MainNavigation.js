@@ -1,4 +1,5 @@
 import React from 'react';
+import Dropdown from './Dropdown';
 import Logo from '../assets/png/logo.png';
 import '../styles/MainNavigation.css';
 
@@ -7,7 +8,7 @@ const MainNavigation = () => {
     <div className="main-nav">
       <div>
         <div className="logo-container">
-          <img src={Logo}></img>
+          <img src={Logo} alt="enternode logo"></img>
           <p className="logo-text">ENTERNODE</p>
         </div>
         <div className="nav-options-container">
@@ -24,9 +25,12 @@ const MainNavigation = () => {
             </div>
           </button>
         </div>
+        <div className="nav-options-mobile">
+          <Dropdown />
+        </div>
       </div>
       <hr />
-      <div className="message-us">
+      <div className="message-us text">
         message us at hello@enternode.com
       </div>
     </div>

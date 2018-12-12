@@ -1,3 +1,6 @@
+@import './colors';
+@import './breakpoints';
+
 @font-face {
   font-family: 'FuturaPT-Heavy';
   src: url('../fonts/futura-pt-heavy.otf') format('opentype');
@@ -16,4 +19,22 @@
 @font-face {
   font-family: 'OverpassMono-Light';
   src: url('../fonts/OverpassMono-Light.ttf') format('opentype');
+}
+
+.big-header {
+  font-family: "FuturaPT-Book";
+  font-size: 50px;
+  color: $color-black;
+
+  @include media('mobile') {
+    font-size: 28px;
+  }
+}
+
+.text {
+  font-family: "FuturaPT-Light";
+  font-size: 13px;
+  color: $color-black;
+  opacity: 0.8;
+  line-height: 25px;
 }

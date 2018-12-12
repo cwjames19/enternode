@@ -1,5 +1,6 @@
 @import './partials/colors';
 @import './partials/fonts';
+@import './partials/breakpoints';
 
 .main-nav {
   display: block;
@@ -53,14 +54,30 @@
 
       button:first-child {
         background-color: $color-citrus;
-        color: $color-black-header-background;
+        color: $color-black;
       }
 
       button:nth-child(2) {
-        background-color: $color-black-header-background;
+        background-color: $color-black;
         color: $color-citrus;
         border: 1px solid #383838;
         margin-left: 0.65rem;
+      }
+    }
+
+    .nav-options-mobile {
+      display: none;
+    }
+
+    @include media('mobile') {
+      .nav-options-container {
+        display: none;
+      }
+
+      .nav-options-mobile {
+        display: flex;
+        height: 100%;
+        
       }
     }
   }
@@ -84,9 +101,15 @@
     border-bottom-style: solid;
     line-height: 2.8rem;
     text-align: right;
-    font-family: "FuturaPT-Light";
     font-size: 12px;
     color: #D8D8D8;
     opacity: 0.4;
+  }
+
+  @include media('mobile') {
+    & > div:first-child {
+      align-items: center;
+      margin-bottom: 1rem;
+    }
   }
 }

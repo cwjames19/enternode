@@ -14,8 +14,27 @@
   font-family: "OverpassMono-Light";
   src: url("../fonts/OverpassMono-Light.ttf") format("opentype");
 }
+.big-header {
+  font-family: "FuturaPT-Book";
+  font-size: 50px;
+  color: #161616;
+}
+@media screen and (max-width: 767px) {
+  .big-header {
+    font-size: 28px;
+  }
+}
+
+.text {
+  font-family: "FuturaPT-Light";
+  font-size: 13px;
+  color: #161616;
+  opacity: 0.8;
+  line-height: 25px;
+}
+
 .header {
-  background-color: #171717;
+  background-color: #161616;
 }
 
 .header--container {
@@ -24,7 +43,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1200px;
-  height: 830px;
+  height: 100vh;
   padding: 4rem 100px 100px;
 }
 
@@ -34,19 +53,16 @@
   justify-content: space-between;
   align-items: center;
 }
+.header--hero .hero--text {
+  max-width: 430px;
+}
 .header--hero .hero--text > h1 {
   color: #45F0F9;
-  font-family: "FuturaPT-Book";
-  font-size: 50px;
   margin: 0 0 20px 0;
 }
 .header--hero .hero--text > p {
-  font-family: "FuturaPT-Light";
-  font-size: 13px;
   color: white;
-  opacity: 0.8;
   max-width: 480px;
-  line-height: 25px;
 }
 .header--hero .hero--dots--container {
   display: flex;
@@ -86,6 +102,32 @@
 }
 .header--hero .hero--dots--container > div.space-between {
   justify-content: space-between;
+}
+
+@media screen and (max-width: 767px) {
+  .header--container {
+    padding: 1.5rem;
+  }
+
+  .header--hero {
+    flex-flow: column nowrap;
+  }
+  .header--hero .hero--text {
+    align-self: flex-start;
+    padding-bottom: 10vh;
+  }
+  .header--hero .hero--text > h1 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .header--hero .hero--text > p {
+    font-size: 16px;
+  }
+  .header--hero .hero--dots--container {
+    height: 80px;
+    width: 80px;
+    align-self: flex-end;
+  }
 }
 
 /*# sourceMappingURL=Header.css.map */

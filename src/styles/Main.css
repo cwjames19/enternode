@@ -14,37 +14,59 @@
   font-family: "OverpassMono-Light";
   src: url("../fonts/OverpassMono-Light.ttf") format("opentype");
 }
-.main {
-  background-color: white;
-  padding: 100px 100px 0;
-}
-
-.about-technology h2 {
+.big-header {
   font-family: "FuturaPT-Book";
   font-size: 50px;
-  line-height: 64px;
   color: #161616;
 }
-.about-technology div:first-of-type {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 90px;
-  margin: 1rem 0;
+@media screen and (max-width: 767px) {
+  .big-header {
+    font-size: 28px;
+  }
 }
-.about-technology div:first-of-type p {
-  margin: 0;
-  padding: 0;
+
+.text {
   font-family: "FuturaPT-Light";
   font-size: 13px;
+  color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-.about-technology div:first-of-type #about-technology-item3 {
+
+.main {
+  background-color: white;
+  padding: 100px 100px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 0;
+  }
+}
+
+.about-technology h2 {
+  line-height: 64px;
+}
+.about-technology > div:first-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+.about-technology > div:first-of-type > div {
+  flex-basis: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+}
+.about-technology > div:first-of-type > div > p:first-child {
+  margin: 0 0 25px 0;
+}
+.about-technology > div:first-of-type #about-technology-item3 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-.about-technology div:first-of-type #about-technology-item2 {
+.about-technology > div:first-of-type #about-technology-item2 {
   grid-column: 1/2;
   grid-row: 2/3;
 }
@@ -53,24 +75,156 @@
   justify-content: center;
 }
 .about-technology div:last-of-type img {
-  height: 257px;
+  height: 100%;
   width: 897px;
   margin: 120px auto 90px;
   align-content: center;
 }
+@media screen and (max-width: 767px) {
+  .about-technology {
+    padding: 4rem 2rem 0;
+  }
+  .about-technology > div:first-of-type {
+    flex-flow: column nowrap;
+    padding-bottom: 0rem;
+  }
+  .about-technology > div:first-of-type > div > p, .about-technology > div:first-of-type > div > p:first-child {
+    margin: 0 0 0.75rem 0;
+  }
+  .about-technology > div:last-of-type img {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 1.5rem;
+  }
+}
 
 .big-names {
-  position: relative;
-  width: calc(100%);
-  height: 600px;
+  width: 100%;
+  padding: 30px 0 0 0;
+  margin: 30px 0 0 0;
+}
+@media screen and (max-width: 767px) {
+  .big-names {
+    padding: 0 2rem;
+  }
 }
 .big-names .dots-container {
   position: absolute;
-  left: -90px;
-  height: 530px;
-  width: 586px;
+  z-index: 0;
+  left: 10px;
+  margin: -30px 0 0 0;
+  height: 562px;
+  width: 50vw;
   background-image: url("../assets/png/rectangle.png");
   background-repeat: repeat;
+}
+.big-names > *:not(.dots-container) {
+  position: relative;
+  z-index: 100;
+  background-color: white;
+}
+.big-names h3 {
+  padding: 10px;
+  font-family: "FuturaPT-Book";
+  font-size: 30px;
+  color: #161616;
+  display: inline-block;
+}
+.big-names .big-names-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  grid-template-rows: repeat(4, 122px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: space-between;
+  align-content: center;
+  justify-items: center;
+  top: 20px;
+  background-color: white;
+}
+@media screen and (max-width: 767px) {
+  .big-names .big-names-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 122px);
+  }
+}
+.big-names .big-names-grid .big-names-item {
+  display: flex;
+  width: 100%;
+  background-color: #F5F5F5;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+}
+.big-names .big-names-grid .big-names-item.item5 {
+  background-color: #45F0F9;
+}
+
+.how-we-work {
+  padding: 100px 0 0 0;
+  width: 100%;
+}
+.how-we-work h2 {
+  font-family: "FuturaPT-Book";
+}
+.how-we-work div.ways-we-work--container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit, 150px);
+  grid-auto-rows: 150px;
+  justify-content: center;
+  align-items: flex-start;
+  grid-column-gap: 12px;
+  padding: 32px 0 105px 0;
+}
+.how-we-work div.ways-we-work--container div.ways-we-work--item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.how-we-work div.ways-we-work--container div.ways-we-work--item > div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 15px;
+  height: 100%;
+  width: 100%;
+}
+.how-we-work div.ways-we-work--container div.ways-we-work--item p {
+  font-family: "FuturaPT-Medium";
+  font-size: 14px;
+  line-height: 18px;
+  color: #161616;
+  opacity: 1;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .how-we-work {
+    padding: 100px 2rem 0;
+  }
+}
+
+@media (max-width: 530px) {
+  .about-technology {
+    padding-bottom: 3rem;
+  }
+  .about-technology > div:last-of-type {
+    display: none;
+  }
+
+  .how-we-work div.ways-we-work--container {
+    padding-bottom: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+  }
+  .how-we-work div.ways-we-work--container > div.ways-we-work--item > div {
+    padding: 14px 8px;
+  }
 }
 .contact-us {
   display: flex;
@@ -85,14 +239,20 @@
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 767px) {
+  .contact-us > div {
+    height: 50vw;
+  }
+  .contact-us > div:first-child {
+    padding: 0 0 0 9vw;
+  }
+  .contact-us > div:last-child {
+    padding: 0 9vw 0 0;
+  }
+}
 .contact-us > div:first-child {
   background-color: white;
   justify-content: flex-start;
-}
-.contact-us > div:first-child h2 {
-  color: #161616;
-  font-family: "FuturaPT-Book";
-  font-size: 50px;
 }
 .contact-us > div:last-child {
   background-color: #F5F5F5;

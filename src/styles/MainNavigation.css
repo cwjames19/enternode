@@ -14,6 +14,25 @@
   font-family: "OverpassMono-Light";
   src: url("../fonts/OverpassMono-Light.ttf") format("opentype");
 }
+.big-header {
+  font-family: "FuturaPT-Book";
+  font-size: 50px;
+  color: #161616;
+}
+@media screen and (max-width: 767px) {
+  .big-header {
+    font-size: 28px;
+  }
+}
+
+.text {
+  font-family: "FuturaPT-Light";
+  font-size: 13px;
+  color: #161616;
+  opacity: 0.8;
+  line-height: 25px;
+}
+
 .main-nav {
   display: block;
 }
@@ -58,13 +77,25 @@
 }
 .main-nav > div:first-child .nav-options-container button:first-child {
   background-color: #E1F196;
-  color: #171717;
+  color: #161616;
 }
 .main-nav > div:first-child .nav-options-container button:nth-child(2) {
-  background-color: #171717;
+  background-color: #161616;
   color: #E1F196;
   border: 1px solid #383838;
   margin-left: 0.65rem;
+}
+.main-nav > div:first-child .nav-options-mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .main-nav > div:first-child .nav-options-container {
+    display: none;
+  }
+  .main-nav > div:first-child .nav-options-mobile {
+    display: flex;
+    height: 100%;
+  }
 }
 .main-nav hr, .main-nav div.message-us {
   border-color: #292929;
@@ -83,10 +114,15 @@
   border-bottom-style: solid;
   line-height: 2.8rem;
   text-align: right;
-  font-family: "FuturaPT-Light";
   font-size: 12px;
   color: #D8D8D8;
   opacity: 0.4;
+}
+@media screen and (max-width: 767px) {
+  .main-nav > div:first-child {
+    align-items: center;
+    margin-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=MainNavigation.css.map */

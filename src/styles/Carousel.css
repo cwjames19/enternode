@@ -1,3 +1,71 @@
+.carousel-inner {
+  border: 60px solid #45F0F9;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .carousel-inner {
+    border-width: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel-inner {
+    border-width: 25px;
+  }
+}
 
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+  opacity: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.carousel-control.left > div, .carousel-control.right > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.carousel-control.left img, .carousel-control.left i, .carousel-control.right img, .carousel-control.right i {
+  position: relative;
+}
+.carousel-control.left .arrow-mobile, .carousel-control.right .arrow-mobile {
+  display: none;
+  color: #161616;
+  font-size: 2.75rem;
+  opacity: 0.6;
+}
+@media screen and (max-width: 767px) {
+  .carousel-control.left img.arrow-desktop, .carousel-control.right img.arrow-desktop {
+    display: none;
+  }
+  .carousel-control.left .arrow-mobile, .carousel-control.right .arrow-mobile {
+    display: block;
+  }
+}
+
+.carousel-control.left img, .carousel-control.left i {
+  align-self: flex-start;
+  right: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .carousel-control.left img, .carousel-control.left i {
+    left: 2.25rem;
+  }
+}
+
+.carousel-control.right img, .carousel-control.right i {
+  align-self: flex-end;
+  left: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .carousel-control.right img, .carousel-control.right i {
+    left: -2.25rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .carousel--caption--container {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=Carousel.css.map */

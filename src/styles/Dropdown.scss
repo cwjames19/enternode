@@ -1,0 +1,51 @@
+@import './partials/colors';
+@import './partials/fonts';
+
+.dropdown button#dropdown-menu {
+  background-color: $color-black;
+  border: none;
+  border-radius: 0px;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px 10px;
+
+  &:hover, &:active {
+    background-color: $color-black;
+    border: 1px solid #383838;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+
+    path {
+      fill: $color-citrus;
+    }
+  }
+}
+
+.dropdown ul {
+  padding: 0;
+
+  li {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    background-color: $color-black;
+    border: 1px solid #383838;
+
+    a {
+      font-family: "FuturaPT-Book";
+      letter-spacing: 1.6px;
+      color: $color-citrus;
+    }
+  }
+
+  li:hover {
+    background-color: $color-citrus;
+
+    a {
+      color: $color-black;
+    }
+  }
+}

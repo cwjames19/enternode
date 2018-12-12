@@ -3,7 +3,7 @@
 @import './partials/breakpoints';
 
 .header {
-  background-color: $color-black-header-background;
+  background-color: $color-black;
 }
 
 .header--container {
@@ -11,8 +11,8 @@
   flex-flow: column nowrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;  // MAKE PADDING INSTEAD OF/IN ADDITION TO THIS
-  height: 830px;
+  max-width: 1200px;
+  height: 100vh;
   padding: 4rem 100px 100px;
 }
 
@@ -23,21 +23,16 @@
   align-items: center;
 
   .hero--text {
+    max-width: 430px;
     
     & > h1 {
-      color: $color-cyan-header-text-hero;
-      font-family: "FuturaPT-Book";
-      font-size: 50px;
+      color: $color-cyan;
       margin: 0 0 20px 0;
     }
 
     & > p {
-      font-family: "FuturaPT-Light";
-      font-size: 13px;
       color: $color-white;
-      opacity: 0.8;
       max-width: 480px;
-      line-height: 25px;
     }
   }
 
@@ -63,7 +58,7 @@
         border-radius: 50%;
   
         &.blue {
-          background-color: $color-cyan-header-text-hero;
+          background-color: $color-cyan;
         }
   
         &.citrus {
@@ -86,6 +81,36 @@
       &.space-between {
         justify-content: space-between;
       }
+    }
+  }
+}
+
+@include media('mobile') {
+  .header--container {
+    padding: 1.5rem;
+  }
+
+  .header--hero {
+    flex-flow: column nowrap;
+
+    .hero--text {
+      align-self: flex-start;
+      padding-bottom: 10vh;
+
+      & > h1 {
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      & > p {
+        font-size: 16px;
+      }
+    }
+
+    .hero--dots--container {
+      height: 80px;
+      width: 80px;
+      align-self: flex-end;
     }
   }
 }
