@@ -18,16 +18,24 @@
   font-family: "FuturaPT-Book";
   font-size: 50px;
   color: #161616;
+  margin: 0 0 20px 0;
+}
+@media screen and (min-width: 1024px) {
+  .big-header {
+    font-size: 56px;
+    margin: 0 0 24px 0;
+  }
 }
 @media screen and (max-width: 767px) {
   .big-header {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 64px;
   }
 }
 
 .text {
   font-family: "FuturaPT-Light";
-  font-size: 13px;
+  font-size: 1rem;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
@@ -114,7 +122,7 @@
   border-bottom-style: solid;
   line-height: 2.8rem;
   text-align: right;
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #D8D8D8;
   opacity: 0.4;
 }

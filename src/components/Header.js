@@ -8,9 +8,9 @@ const Header = () => {
       <div className="header--container">
         <MainNavigation />
         <div className="header--hero">
-          <div className="hero--text text">
-          <h1 className="big-header">Node.js for Enterprise</h1>
-            <p>
+          <div className="hero--text">
+            <h1 className="big-header">Node.js for Enterprise</h1>
+            <p className="text">
               We are a team of experience, certified Node.js experts, 
               delivering highly scalable & efficient technology service 
               for enterprise sector.

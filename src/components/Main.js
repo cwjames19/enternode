@@ -56,7 +56,7 @@ const waysWeWork =
           <div className="ways-we-work--item">
             <div>
               <img src={way[0]} className={`item${i}`} alt={`ways we work ${i}`} key={i} />
-              <p>{way[1]}</p>
+              <p className="text" >{way[1]}</p>
             </div>
           </div>
         );
@@ -120,7 +120,7 @@ const Main = () => {
           <h2 className="big-header">Contact us</h2>
         </div>
         <div>
-          <p className="display-linebreak">{contactInfo}</p>
+          <p className="display-linebreak text">{contactInfo}</p>
         </div>
       </section>
     </div>

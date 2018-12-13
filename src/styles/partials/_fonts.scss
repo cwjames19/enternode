@@ -25,15 +25,22 @@
   font-family: "FuturaPT-Book";
   font-size: 50px;
   color: $color-black;
+  margin: 0 0 20px 0;
+
+  @include media('desktop') {
+    font-size: 56px;
+    margin: 0 0 24px 0;
+  }
 
   @include media('mobile') {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 64px;
   }
 }
 
 .text {
   font-family: "FuturaPT-Light";
-  font-size: 13px;
+  font-size: 1rem;
   color: $color-black;
   opacity: 0.8;
   line-height: 25px;

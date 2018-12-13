@@ -150,7 +150,7 @@
   width: 100%;
 
   h2 {
-    font-family: "FuturaPT-Book"
+    font-family: "FuturaPT-Book";
   }
 
   div.ways-we-work--container {
@@ -183,12 +183,17 @@
 
       p {
         font-family: "FuturaPT-Medium";
-        font-size: 14px;
+        font-size: 0.9rem;
         line-height: 18px;
-        color: #161616;
         opacity: 1;
         text-align: center;
       }
+    }
+  }
+    
+  @include media('desktop') {
+    p {
+      max-width: 60%;
     }
   }
 
@@ -196,6 +201,57 @@
     padding: 100px 2rem 0;
   }
 }
+
+.contact-us {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+
+
+  & > div {
+    height: 220px;
+    flex-basis: 50%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > div:first-child {
+    background-color: $color-white;
+    justify-content: flex-start;
+  }
+
+  & > div:last-child {
+    background-color: #F5F5F5;
+    justify-content: flex-end;
+
+    p {
+      position: relative;
+      top: 10px;
+      text-align: right;
+    }
+  }
+
+  @include media('mobile') {
+    & > div {
+      height: 50vw;
+
+      &:first-child {
+        padding: 0 0 0 9vw;
+      }
+
+      &:last-child {
+        padding: 0 9vw 0 0;
+      }
+    }
+
+    & > div:last-of-type p {
+      line-height: 35px;
+    }
+  }
+}
+
 
 @include media(530px) {
   .about-technology {
@@ -217,53 +273,27 @@
       }
     }
   }
-}
 
-.contact-us {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
+  .contact-us {
+    & > div:first-of-type {
+      background-color: #f5f5f5;
+      justify-content: flex-start;
+      align-items: center;
 
-
-  & > div {
-    height: 220px;
-    flex-basis: 50%;
-    padding: 0 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include media('mobile') {
-      height: 50vw;
-
-      &:first-child {
-        padding: 0 0 0 9vw;
-      }
-
-      &:last-child {
-        padding: 0 9vw 0 0;
+      h2 {
+        padding-right: 1.5rem;
       }
     }
-  }
 
-  & > div:first-child {
-    background-color: $color-white;
-    justify-content: flex-start;
-  }
+    & > div:last-of-type {
+      padding-right: 0.75rem;
+      align-items: center;
 
-  & > div:last-child {
-    background-color: #F5F5F5;
-    justify-content: flex-end;
-
-    p {
-      position: relative;
-      top: 10px;
-      font-size: 13px;
-      font-family: "FuturaPT-Light";
-      line-height: 25px;
-      color: #161616;
-      opacity: 0.8;
-      text-align: right;
+      p {
+        line-height: 25px;
+        font-size: 0.9rem;
+        top: 0;
+      }
     }
   }
 }
