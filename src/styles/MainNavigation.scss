@@ -28,6 +28,10 @@
         color: #EEEEEE;
         letter-spacing: 4.8px;
         margin-left: 1.25rem;
+
+        // @include media('desktop') {
+        //   font-size: 14px;
+        // }
       }
     }
 

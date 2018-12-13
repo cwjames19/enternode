@@ -40,6 +40,11 @@
   opacity: 0.8;
   line-height: 25px;
 }
+@media screen and (min-width: 1024px) {
+  .text {
+    font-size: 1.15rem;
+  }
+}
 
 .main {
   background-color: white;
