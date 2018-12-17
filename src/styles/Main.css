@@ -169,8 +169,9 @@
   padding: 0 18px;
 }
 .big-names .big-names-grid .big-names-item:hover {
-  background-color: cyan;
+  background-color: #45F0F9;
 }
+
 .how-we-work {
   padding: 120px 15px 0;
   width: 100%;
