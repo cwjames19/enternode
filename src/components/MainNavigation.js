@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from './Dropdown';
-import Logo from '../assets/png/logo.png';
+import Logo from '../assets/svg/logo.svg';
 import '../styles/MainNavigation.css';
 
 const MainNavigation = () => {

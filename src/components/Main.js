@@ -4,7 +4,7 @@ import Carousel from './Carousel';
 import '../styles/Main.css';
 
 //images for big-names section
-import FrontendBackend from '../assets/png/frontend-backend.png';
+import FrontendBackend from '../assets/svg/frontend-backend.svg';
 import Walmart from "../assets/svg/big-names/0.svg";
 import Ebay from "../assets/svg/big-names/1.svg";
 import Paypal from "../assets/svg/big-names/2.svg";
@@ -17,78 +17,56 @@ import Microsoft from "../assets/svg/big-names/8.svg";
 import Uber from "../assets/svg/big-names/9.svg";
 import Yahoo from "../assets/svg/big-names/10.svg";
 import SpaceX from "../assets/svg/big-names/11.svg";
+import WalmartWhite from "../assets/svg/big-names/0-white.svg";
+import EbayWhite from "../assets/svg/big-names/1-white.svg";
+import PaypalWhite from "../assets/svg/big-names/2-white.svg";
+import DowJonesWhite from "../assets/svg/big-names/3-white.svg";
+import IntuitWhite from "../assets/svg/big-names/4-white.svg";
+import NetflixWhite from "../assets/svg/big-names/5-white.svg";
+import LinkedInWhite from "../assets/svg/big-names/6-white.svg";
+import NewYorkTimesWhite from "../assets/svg/big-names/7-white.svg";
+import MicrosoftWhite from "../assets/svg/big-names/8-white.svg";
+import UberWhite from "../assets/svg/big-names/9-white.svg";
+import YahooWhite from "../assets/svg/big-names/10-white.svg";
+import SpaceXWhite from "../assets/svg/big-names/11-white.svg";
 
 //images for ways-we-work section
-import Sprint from '../assets/png/ways-we-work/1.png';
-import Trial from '../assets/png/ways-we-work/2.png';
-import Pros from '../assets/png/ways-we-work/3.png';
-import Technical from '../assets/png/ways-we-work/4.png';
-import Billing from '../assets/png/ways-we-work/5.png';
-import Contact from '../assets/png/ways-we-work/6.png';
+import Sprint from '../assets/svg/ways-we-work/0.svg';
+import Trial from '../assets/svg/ways-we-work/1.svg';
+import Pros from '../assets/svg/ways-we-work/2.svg';
+import Technical from '../assets/svg/ways-we-work/3.svg';
+import Billing from '../assets/svg/ways-we-work/4.svg';
+import Contact from '../assets/svg/ways-we-work/5.svg';
 
 
 const contactInfo ='hello@enternode.com \n +48 535714196 \n Poznańska 11/10b \n 00-680 Warsaw, Poland \n';
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleOnMouse = this.handleMouse.bind(this);
-  }
-
-  handleMouse(e) {
-    //identifies <object />
-    let el = e.target.children[0];
-
-    //identifies embedded document in <object /> (svg, etc.)
-    let embedDoc;
-    if (el && el.contentDocument) {
-      embedDoc = el.contentDocument;
-    } else if (el && el.getSVGDocument) {
-      embedDoc = el.getSVGDocument();
-    }
-    
-    //apply style changes or report no doc found
-    if(embedDoc) {
-      let collection = embedDoc.querySelectorAll("svg *");
-      [...collection].forEach( (el) => {
-        if( 'mouseenter' === e.type || 'touchstart' === e.type ) {
-          el.classList.add('hover');
-        } else {
-          el.classList.remove('hover');
-        }
-      });
-    } else if ( 'mouseleave' === e.type || 'touchend' === e.type ) {
-      console.log('No embedded document found');
-      return;
-    }
-
-  }
 
   render() {
     const bigNames = 
       <div className="big-names-grid">
         {
           [
-            [Walmart, "Walmart"],
-            [Ebay, "Ebay"],
-            [Paypal, "Paypal"],
-            [DowJones, "DowJones"],
-            [Intuit, "Intuit"],
-            [Netflix, "Netflix"],
-            [LinkedIn, "LinkedIn"],
-            [NewYorkTimes, "NewYorkTimes"],
-            [Microsoft, "Microsoft"],
-            [Uber, "Uber"],
-            [Yahoo, "Yahoo"],
-            [SpaceX, "SpaceX"]
+            [Walmart, WalmartWhite, "Walmart"],
+            [Ebay, EbayWhite, "Ebay"],
+            [Paypal, PaypalWhite, "Paypal"],
+            [DowJones, DowJonesWhite, "DowJones"],
+            [Intuit, IntuitWhite, "Intuit"],
+            [Netflix, NetflixWhite, "Netflix"],
+            [LinkedIn, LinkedInWhite, "LinkedIn"],
+            [NewYorkTimes, NewYorkTimesWhite, "NewYorkTimes"],
+            [Microsoft, MicrosoftWhite, "Microsoft"],
+            [Uber, UberWhite, "Uber"],
+            [Yahoo, YahooWhite, "Yahoo"],
+            [SpaceX, SpaceXWhite, "SpaceX"]
           ].map( (name, i) => {
             return (
               <BigName
-                name={name[1]}
+                name={name[2]}
                 logo={name[0]}
+                white={name[1]}
                 id={`big-names-item${i}`}
-                onEvent={this.handleMouse}
                 key={`big-name-item${i}`}
               />
             );
@@ -161,6 +139,7 @@ class Main extends React.Component {
               <h2 className="big-header">Contact us</h2>
             </div>
             <div>
+              <h2 className="big-header">Contact us</h2>
               <p className="display-linebreak text">{contactInfo}</p>
             </div>
           </div>

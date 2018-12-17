@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/BigName.css';
 
-const BigName = function({name, logo, id, onEvent}) {
+const BigName = function({name, logo, id, onEvent, white}) {
   return(
     <div
       className={`big-names-item`}
@@ -11,14 +11,8 @@ const BigName = function({name, logo, id, onEvent}) {
       onTouchStart={onEvent}
       onTouchEnd={onEvent}
     >
-      <object
-        type="image/svg+xml"
-        className="emb"
-        id={`${id}-object`}
-        data={logo}
-        alt={name}
-        aria-label={name}
-      />
+      <img src={logo} alt={name} className="emb" aria-label={name} />
+      <img src={white} alt={`${name}-white`} className="emb" aria-label={name} />
     </div>
   );
 }
