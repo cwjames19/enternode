@@ -4,7 +4,7 @@
 
 .main {
   background-color: $color-white;
-  padding: 100px 100px 0;
+  padding: 80px 100px 0;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -17,6 +17,10 @@
 
   h2 {
     line-height: 64px;
+  }
+
+  p {
+    height: auto;
   }
 
   & > div:first-of-type {
@@ -137,20 +141,28 @@
       align-items: center;
       justify-content: center;
       padding: 0 18px;
+    }
 
-      &.item5 {
-        background-color: $color-cyan;
+    .big-names-item:hover {
+      background-color: cyan;
+      
+      object {
+        
       }
     }
   }
 }
 
 .how-we-work {
-  padding: 100px 0 0 0;
+  padding: 120px 15px 0;
   width: 100%;
 
   h2 {
     font-family: "FuturaPT-Book";
+  }
+
+  p.double-column {
+    height: 100px;
   }
 
   div.ways-we-work--container {
@@ -161,7 +173,8 @@
     justify-content: center;
     align-items: flex-start;
     grid-column-gap: 12px;
-    padding: 32px 0 105px 0;
+    grid-row-gap: 80px;
+    padding: 75px 0 85px 0;
 
     div.ways-we-work--item {
       display: flex;
@@ -190,64 +203,68 @@
       }
     }
   }
-    
-  @include media('desktop') {
-    p {
-      max-width: 60%;
-    }
-  }
 
   @include media('mobile') {
     padding: 100px 2rem 0;
+
+    p.double-column {
+      column-count: 1;
+    }
   }
 }
 
-.contact-us {
-  display: flex;
-  flex-flow: row nowrap;
+.carousel-contact {
   width: 100%;
-
-
-  & > div {
-    height: 220px;
-    flex-basis: 50%;
-    padding: 0 60px;
+  padding: 0 31px;
+  
+  .contact-us {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  & > div:first-child {
-    background-color: $color-white;
-    justify-content: flex-start;
-  }
-
-  & > div:last-child {
-    background-color: #F5F5F5;
-    justify-content: flex-end;
-
-    p {
-      position: relative;
-      top: 10px;
-      text-align: right;
-    }
-  }
-
-  @include media('mobile') {
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 220px;
+  
     & > div {
-      height: 50vw;
-
-      &:first-child {
-        padding: 0 0 0 9vw;
-      }
-
-      &:last-child {
-        padding: 0 9vw 0 0;
+      height: 220px;
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    & > div:first-child {
+      background-color: $color-white;
+      justify-content: flex-start;
+      padding: 0 7.5% 0 7%;
+    }
+  
+    & > div:last-child {
+      background-color: #F5F5F5;
+      justify-content: flex-end;
+      padding: 0 8.5% 0 8%;
+  
+      p {
+        position: relative;
+        top: 15px;
+        text-align: right;
       }
     }
-
-    & > div:last-of-type p {
-      line-height: 35px;
+  
+    @include media('mobile') {
+      & > div {
+        height: 50vw;
+  
+        &:first-child {
+          padding: 0 0 0 9vw;
+        }
+  
+        &:last-child {
+          padding: 0 9vw 0 0;
+        }
+      }
+  
+      & > div:last-of-type p {
+        line-height: 35px;
+      }
     }
   }
 }
@@ -256,6 +273,10 @@
 @include media(530px) {
   .about-technology {
     padding-bottom: 3rem;
+
+    p.double-column {
+      column-count: 1;
+    }
 
     & > div:last-of-type {
       display: none;

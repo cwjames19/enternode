@@ -20,12 +20,6 @@
   color: #161616;
   margin: 0 0 20px 0;
 }
-@media screen and (min-width: 1024px) {
-  .big-header {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-}
 @media screen and (max-width: 767px) {
   .big-header {
     font-size: 32px;
@@ -34,21 +28,22 @@
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .text {
-    font-size: 1.15rem;
-  }
+
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }
 
 .main {
   background-color: white;
-  padding: 100px 100px 0;
+  padding: 80px 100px 0;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -60,6 +55,9 @@
 
 .about-technology h2 {
   line-height: 64px;
+}
+.about-technology p {
+  height: auto;
 }
 .about-technology > div:first-of-type {
   display: flex;
@@ -170,16 +168,18 @@
   justify-content: center;
   padding: 0 18px;
 }
-.big-names .big-names-grid .big-names-item.item5 {
-  background-color: #45F0F9;
+.big-names .big-names-grid .big-names-item:hover {
+  background-color: cyan;
 }
-
 .how-we-work {
-  padding: 100px 0 0 0;
+  padding: 120px 15px 0;
   width: 100%;
 }
 .how-we-work h2 {
   font-family: "FuturaPT-Book";
+}
+.how-we-work p.double-column {
+  height: 100px;
 }
 .how-we-work div.ways-we-work--container {
   display: grid;
@@ -189,7 +189,8 @@
   justify-content: center;
   align-items: flex-start;
   grid-column-gap: 12px;
-  padding: 32px 0 105px 0;
+  grid-row-gap: 80px;
+  padding: 75px 0 85px 0;
 }
 .how-we-work div.ways-we-work--container div.ways-we-work--item {
   display: flex;
@@ -215,54 +216,58 @@
   opacity: 1;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
-  .how-we-work p {
-    max-width: 60%;
-  }
-}
 @media screen and (max-width: 767px) {
   .how-we-work {
     padding: 100px 2rem 0;
   }
+  .how-we-work p.double-column {
+    column-count: 1;
+  }
 }
 
-.contact-us {
+.carousel-contact {
+  width: 100%;
+  padding: 0 31px;
+}
+.carousel-contact .contact-us {
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
+  height: 220px;
 }
-.contact-us > div {
+.carousel-contact .contact-us > div {
   height: 220px;
   flex-basis: 50%;
-  padding: 0 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact-us > div:first-child {
+.carousel-contact .contact-us > div:first-child {
   background-color: white;
   justify-content: flex-start;
+  padding: 0 7.5% 0 7%;
 }
-.contact-us > div:last-child {
+.carousel-contact .contact-us > div:last-child {
   background-color: #F5F5F5;
   justify-content: flex-end;
+  padding: 0 8.5% 0 8%;
 }
-.contact-us > div:last-child p {
+.carousel-contact .contact-us > div:last-child p {
   position: relative;
-  top: 10px;
+  top: 15px;
   text-align: right;
 }
 @media screen and (max-width: 767px) {
-  .contact-us > div {
+  .carousel-contact .contact-us > div {
     height: 50vw;
   }
-  .contact-us > div:first-child {
+  .carousel-contact .contact-us > div:first-child {
     padding: 0 0 0 9vw;
   }
-  .contact-us > div:last-child {
+  .carousel-contact .contact-us > div:last-child {
     padding: 0 9vw 0 0;
   }
-  .contact-us > div:last-of-type p {
+  .carousel-contact .contact-us > div:last-of-type p {
     line-height: 35px;
   }
 }
@@ -270,6 +275,9 @@
 @media (max-width: 530px) {
   .about-technology {
     padding-bottom: 3rem;
+  }
+  .about-technology p.double-column {
+    column-count: 1;
   }
   .about-technology > div:last-of-type {
     display: none;

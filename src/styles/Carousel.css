@@ -1,5 +1,15 @@
+.carousel--container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  width: 100%;
+}
+
 .carousel-inner {
-  border: 60px solid #45F0F9;
+  border: 70px solid #45F0F9;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .carousel-inner {
@@ -44,7 +54,7 @@
 
 .carousel-control.left img, .carousel-control.left i {
   align-self: flex-start;
-  right: 2rem;
+  right: 35px;
 }
 @media screen and (max-width: 767px) {
   .carousel-control.left img, .carousel-control.left i {
@@ -54,17 +64,11 @@
 
 .carousel-control.right img, .carousel-control.right i {
   align-self: flex-end;
-  left: 2rem;
+  left: 35px;
 }
 @media screen and (max-width: 767px) {
   .carousel-control.right img, .carousel-control.right i {
     left: -2.25rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .carousel--caption--container {
-    display: none;
   }
 }
 

@@ -27,11 +27,6 @@
   color: $color-black;
   margin: 0 0 20px 0;
 
-  @include media('desktop') {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-
   @include media('mobile') {
     font-size: 32px;
     line-height: 64px;
@@ -39,13 +34,15 @@
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: $color-black;
   opacity: 0.8;
   line-height: 25px;
+}
 
-  @include media('desktop') {
-    font-size: 1.15rem;
-  }
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }

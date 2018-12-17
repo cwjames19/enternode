@@ -209,12 +209,6 @@ img {
   color: #161616;
   margin: 0 0 20px 0;
 }
-@media screen and (min-width: 1024px) {
-  .big-header {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-}
 @media screen and (max-width: 767px) {
   .big-header {
     font-size: 32px;
@@ -223,16 +217,17 @@ img {
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .text {
-    font-size: 1.15rem;
-  }
+
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }
 
 html, body {

@@ -20,12 +20,6 @@
   color: #161616;
   margin: 0 0 20px 0;
 }
-@media screen and (min-width: 1024px) {
-  .big-header {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-}
 @media screen and (max-width: 767px) {
   .big-header {
     font-size: 32px;
@@ -34,19 +28,27 @@
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .text {
-    font-size: 1.15rem;
-  }
+
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }
 
-.dropdown button#dropdown-menu {
+.dropdown {
+  height: 37px;
+  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown > button#dropdown-menu {
   background-color: #161616;
   border: none;
   border-radius: 0px;
@@ -54,18 +56,13 @@
   align-items: flex-start;
   padding: 5px 10px;
 }
-.dropdown button#dropdown-menu:hover, .dropdown button#dropdown-menu:active {
-  background-color: #161616;
-  border: 1px solid #383838;
-}
-.dropdown button#dropdown-menu svg {
+.dropdown > button#dropdown-menu svg {
   height: 100%;
   width: 100%;
 }
-.dropdown button#dropdown-menu svg path {
+.dropdown > button#dropdown-menu svg path {
   fill: #E1F196;
 }
-
 .dropdown ul {
   padding: 0;
 }
@@ -85,6 +82,7 @@
   background-color: #E1F196;
 }
 .dropdown ul li:hover a {
+  background-color: #E1F196;
   color: #161616;
 }
 

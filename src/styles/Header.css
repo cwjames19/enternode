@@ -20,12 +20,6 @@
   color: #161616;
   margin: 0 0 20px 0;
 }
-@media screen and (min-width: 1024px) {
-  .big-header {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-}
 @media screen and (max-width: 767px) {
   .big-header {
     font-size: 32px;
@@ -34,16 +28,17 @@
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .text {
-    font-size: 1.15rem;
-  }
+
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }
 
 .header {
@@ -57,7 +52,7 @@
   width: 100%;
   max-width: 1200px;
   height: 100vh;
-  padding: 4rem 100px 100px;
+  padding: 4rem 100px 4.5rem;
 }
 
 .header--hero {
@@ -67,7 +62,8 @@
   align-items: center;
 }
 .header--hero .hero--text {
-  max-width: 430px;
+  flex-shrink: 1;
+  padding: 0 3rem 0 0;
 }
 .header--hero .hero--text > h1 {
   color: #45F0F9;
@@ -77,12 +73,16 @@
   max-width: 480px;
 }
 .header--hero .hero--dots--container {
+  align-self: flex-end;
+  position: relative;
+  bottom: 28px;
+  flex-shrink: 0;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 93px;
+  height: 106px;
   margin: 0 20px 0 0;
 }
 .header--hero .hero--dots--container > div {

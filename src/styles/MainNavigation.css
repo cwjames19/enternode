@@ -20,12 +20,6 @@
   color: #161616;
   margin: 0 0 20px 0;
 }
-@media screen and (min-width: 1024px) {
-  .big-header {
-    font-size: 56px;
-    margin: 0 0 24px 0;
-  }
-}
 @media screen and (max-width: 767px) {
   .big-header {
     font-size: 32px;
@@ -34,16 +28,17 @@
 }
 
 .text {
-  font-family: "FuturaPT-Light";
-  font-size: 1rem;
+  font-family: "OverpassMono-Light";
+  font-size: 13px;
   color: #161616;
   opacity: 0.8;
   line-height: 25px;
 }
-@media screen and (min-width: 1024px) {
-  .text {
-    font-size: 1.15rem;
-  }
+
+.double-column {
+  column-count: 2;
+  column-gap: 6rem;
+  column-fill: auto;
 }
 
 .main-nav {
@@ -63,7 +58,7 @@
   align-items: center;
 }
 .main-nav > div:first-child .logo-container p {
-  font-family: "FuturaPT-Light", Arial, sans-serif;
+  font-family: "FuturaPT-Heavy", Arial, sans-serif;
   font-size: 12px;
   color: #EEEEEE;
   letter-spacing: 4.8px;
@@ -76,6 +71,9 @@
   width: 154px;
   height: 30px;
   padding: 0px 8px;
+  background-color: #161616;
+  color: #E1F196;
+  border: 1px solid #383838;
 }
 .main-nav > div:first-child .nav-options-container button div {
   height: 100%;
@@ -88,14 +86,13 @@
   letter-spacing: 4px;
   line-height: 30px;
 }
-.main-nav > div:first-child .nav-options-container button:first-child {
+.main-nav > div:first-child .nav-options-container button:hover {
   background-color: #E1F196;
+}
+.main-nav > div:first-child .nav-options-container button:hover p {
   color: #161616;
 }
-.main-nav > div:first-child .nav-options-container button:nth-child(2) {
-  background-color: #161616;
-  color: #E1F196;
-  border: 1px solid #383838;
+.main-nav > div:first-child .nav-options-container button:last-of-type {
   margin-left: 0.65rem;
 }
 .main-nav > div:first-child .nav-options-mobile {
@@ -125,10 +122,16 @@
   float: right;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  line-height: 2.8rem;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav div.message-us p {
+  line-height: 15px;
   text-align: right;
-  font-size: 0.9rem;
-  color: #D8D8D8;
+  font-size: 12px;
+  color: #FFFFFF;
   opacity: 0.4;
 }
 @media screen and (max-width: 767px) {

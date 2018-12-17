@@ -22,12 +22,9 @@ const nextIcon =
 
 const carouselItems = [sampleImage1, sampleImage2, sampleImage3, sampleImage4].map( (img, i) => {
   return(
-    <Carousel.Item key={i}>
-      <img className="carousel--img" src={img} alt={`sample enternode work ${i}`} />
-      <Carousel.Caption className="carousel--caption--container">
-        <h3 className="carousel--caption big-header">{i + 1}</h3>
-      </Carousel.Caption>
-    </Carousel.Item>
+      <Carousel.Item key={i}>
+        <img className="carousel--img" src={img} alt={`sample enternode work ${i}`} />
+      </Carousel.Item>
   );
 });
 
@@ -54,16 +51,18 @@ class EnterNodeCarousel extends React.Component {
     const {index, direction} = this.state;
 
     return(
-      <Carousel
-        prevIcon={prevIcon}
-        nextIcon={nextIcon}
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-        indicators={false}
-      >
-        {carouselItems}
-      </Carousel>
+      <div className="carousel--container">
+        <Carousel
+          prevIcon={prevIcon}
+          nextIcon={nextIcon}
+          activeIndex={index}
+          direction={direction}
+          onSelect={this.handleSelect}
+          indicators={false}
+        >
+          {carouselItems}
+        </Carousel>
+      </div>
     );
   }
 }

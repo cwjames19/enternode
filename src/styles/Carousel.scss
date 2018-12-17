@@ -1,8 +1,18 @@
 @import 'partials/colors';
 @import 'partials/breakpoints';
 
+.carousel--container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  width: 100%;
+}
+
 .carousel-inner {
-  border: 60px solid $color-cyan;
+  border: 70px solid $color-cyan;
 
   @include media('tablet') {
     border-width: 40px;
@@ -30,10 +40,6 @@
     position: relative;
   }
 
-  // i {
-  //   position: absolute;
-  // }
-
   .arrow-mobile {
     display: none;
     color: #161616;
@@ -54,7 +60,7 @@
 
 .carousel-control.left img, .carousel-control.left i {
   align-self: flex-start;
-  right: 2rem;
+  right: 35px;
 
   @include media('mobile') {
     left: 2.25rem;
@@ -63,16 +69,10 @@
 
 .carousel-control.right img, .carousel-control.right i {
   align-self: flex-end;
-  left: 2rem;
+  left: 35px;
 
   @include media('mobile') {
     left: -2.25rem;
-  }
-}
-
-@include media('mobile') {
-  .carousel--caption--container {
-    display: none;
   }
 }
 

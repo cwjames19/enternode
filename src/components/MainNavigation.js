@@ -31,7 +31,7 @@ const MainNavigation = () => {
       </div>
       <hr />
       <div className="message-us text">
-        message us at hello@enternode.com
+        <p>message us at hello@enternode.com</p>
       </div>
     </div>
   );
