@@ -21,4 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 .css.map
+=======
+.css.map
+/.firebase
+>>>>>>> d16362e56f05cae296294d68a0623a18093bdac5
